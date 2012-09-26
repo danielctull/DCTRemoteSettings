@@ -10,6 +10,16 @@
 		247705C116120DC90036486C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705C016120DC90036486C /* Foundation.framework */; };
 		247705C616120DC90036486C /* DCTRemoteSettings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 247705C516120DC90036486C /* DCTRemoteSettings.h */; };
 		247705C816120DC90036486C /* DCTRemoteSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 247705C716120DC90036486C /* DCTRemoteSettings.m */; };
+		247705F716121A6E0036486C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705D4161219330036486C /* UIKit.framework */; };
+		247705F816121A6E0036486C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705C016120DC90036486C /* Foundation.framework */; };
+		247705F916121A6E0036486C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705D7161219330036486C /* CoreGraphics.framework */; };
+		247705FF16121A6E0036486C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 247705FD16121A6E0036486C /* InfoPlist.strings */; };
+		2477060116121A6E0036486C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2477060016121A6E0036486C /* main.m */; };
+		2477060516121A6E0036486C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2477060416121A6E0036486C /* AppDelegate.m */; };
+		2477060716121A6E0036486C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2477060616121A6E0036486C /* Default.png */; };
+		2477060916121A6E0036486C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2477060816121A6E0036486C /* Default@2x.png */; };
+		2477060B16121A6E0036486C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2477060A16121A6E0036486C /* Default-568h@2x.png */; };
+		2477060F16121A7E0036486C /* libDCTRemoteSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705BD16120DC90036486C /* libDCTRemoteSettings.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +38,20 @@
 /* Begin PBXFileReference section */
 		247705BD16120DC90036486C /* libDCTRemoteSettings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDCTRemoteSettings.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		247705C016120DC90036486C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		247705C416120DC90036486C /* DCTRemoteSettings-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCTRemoteSettings-Prefix.pch"; sourceTree = "<group>"; };
 		247705C516120DC90036486C /* DCTRemoteSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCTRemoteSettings.h; sourceTree = "<group>"; };
 		247705C716120DC90036486C /* DCTRemoteSettings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTRemoteSettings.m; sourceTree = "<group>"; };
+		247705D4161219330036486C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		247705D7161219330036486C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		247705F516121A6E0036486C /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		247705FC16121A6E0036486C /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		247705FE16121A6E0036486C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2477060016121A6E0036486C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2477060216121A6E0036486C /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
+		2477060316121A6E0036486C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2477060416121A6E0036486C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2477060616121A6E0036486C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2477060816121A6E0036486C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2477060A16121A6E0036486C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +63,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		247705F216121A6E0036486C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2477060F16121A7E0036486C /* libDCTRemoteSettings.a in Frameworks */,
+				247705F716121A6E0036486C /* UIKit.framework in Frameworks */,
+				247705F816121A6E0036486C /* Foundation.framework in Frameworks */,
+				247705F916121A6E0036486C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				247705C216120DC90036486C /* DCTRemoteSettings */,
+				247705FA16121A6E0036486C /* Demo */,
 				247705BF16120DC90036486C /* Frameworks */,
 				247705BE16120DC90036486C /* Products */,
 			);
@@ -58,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				247705BD16120DC90036486C /* libDCTRemoteSettings.a */,
+				247705F516121A6E0036486C /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				247705C016120DC90036486C /* Foundation.framework */,
+				247705D4161219330036486C /* UIKit.framework */,
+				247705D7161219330036486C /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -75,15 +111,30 @@
 			children = (
 				247705C516120DC90036486C /* DCTRemoteSettings.h */,
 				247705C716120DC90036486C /* DCTRemoteSettings.m */,
-				247705C316120DC90036486C /* Supporting Files */,
 			);
 			path = DCTRemoteSettings;
 			sourceTree = "<group>";
 		};
-		247705C316120DC90036486C /* Supporting Files */ = {
+		247705FA16121A6E0036486C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				247705C416120DC90036486C /* DCTRemoteSettings-Prefix.pch */,
+				2477060316121A6E0036486C /* AppDelegate.h */,
+				2477060416121A6E0036486C /* AppDelegate.m */,
+				247705FB16121A6E0036486C /* Supporting Files */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		247705FB16121A6E0036486C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				247705FC16121A6E0036486C /* Demo-Info.plist */,
+				247705FD16121A6E0036486C /* InfoPlist.strings */,
+				2477060016121A6E0036486C /* main.m */,
+				2477060216121A6E0036486C /* Demo-Prefix.pch */,
+				2477060616121A6E0036486C /* Default.png */,
+				2477060816121A6E0036486C /* Default@2x.png */,
+				2477060A16121A6E0036486C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +159,23 @@
 			productReference = 247705BD16120DC90036486C /* libDCTRemoteSettings.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		247705F416121A6E0036486C /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2477060C16121A6E0036486C /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				247705F116121A6E0036486C /* Sources */,
+				247705F216121A6E0036486C /* Frameworks */,
+				247705F316121A6E0036486C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 247705F516121A6E0036486C /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -130,9 +198,24 @@
 			projectRoot = "";
 			targets = (
 				247705BC16120DC90036486C /* DCTRemoteSettings */,
+				247705F416121A6E0036486C /* Demo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		247705F316121A6E0036486C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				247705FF16121A6E0036486C /* InfoPlist.strings in Resources */,
+				2477060716121A6E0036486C /* Default.png in Resources */,
+				2477060916121A6E0036486C /* Default@2x.png in Resources */,
+				2477060B16121A6E0036486C /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		247705B916120DC90036486C /* Sources */ = {
@@ -143,7 +226,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		247705F116121A6E0036486C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2477060116121A6E0036486C /* main.m in Sources */,
+				2477060516121A6E0036486C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		247705FD16121A6E0036486C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				247705FE16121A6E0036486C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		247705C916120DC90036486C /* Debug */ = {
@@ -197,7 +300,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTRemoteSettings.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTRemoteSettings/DCTRemoteSettings-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -209,10 +311,34 @@
 			buildSettings = {
 				DSTROOT = /tmp/DCTRemoteSettings.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DCTRemoteSettings/DCTRemoteSettings-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2477060D16121A6E0036486C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2477060E16121A6E0036486C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -233,6 +359,14 @@
 			buildConfigurations = (
 				247705CC16120DC90036486C /* Debug */,
 				247705CD16120DC90036486C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2477060C16121A6E0036486C /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2477060D16121A6E0036486C /* Debug */,
+				2477060E16121A6E0036486C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

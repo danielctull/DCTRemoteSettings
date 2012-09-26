@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'DCTRemoteSettings' target in the 'DCTRemoteSettings' project
-//
-
-#ifdef __OBJC__
-	#import <Foundation/Foundation.h>
-#endif
