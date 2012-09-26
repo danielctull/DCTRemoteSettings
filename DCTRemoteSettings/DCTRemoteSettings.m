@@ -7,11 +7,13 @@
 //
 
 #import "DCTRemoteSettings.h"
+#import "_DCTRemoteSettingsDiskCache.h"
 
 @implementation DCTRemoteSettings {
 	__strong NSMutableDictionary *_handlers;
 	__strong NSDictionary *_remoteSettings;
 	__strong NSMutableDictionary *_defaultSettings;
+	__strong _DCTRemoteSettingsDiskCache *_diskCache;
 }
 
 + (DCTRemoteSettings *)sharedRemoteSettings {
@@ -35,6 +37,22 @@
 	_URL = [URL copy];
 	_remoteSettings = nil;
 	_status = DCTRemoteSettingsStatusNoSettings;
+	[self _setupDiskCache];
+}
+
+- (void)setCacheOnDisk:(BOOL)cacheOnDisk {
+	_cacheOnDisk = cacheOnDisk;
+	[self _setupDiskCache];
+}
+
+- (void)_setupDiskCache {
+	
+	if (!self.URL || !self.cacheOnDisk) {
+		_diskCache = nil;
+		return;
+	}
+	
+	_diskCache = [[_DCTRemoteSettingsDiskCache alloc] initWithURL:self.URL];
 }
 
 - (void)setDefaultSetting:(id)defaultSetting forKey:(NSString *)key {
@@ -72,17 +90,28 @@
 		return;
 	
 	_status = DCTRemoteSettingsStatusFetching;
-		
+	
+	_remoteSettings = [_diskCache cachedRemoteSettings];
+	if (_remoteSettings) {
+		_status = DCTRemoteSettingsStatusSuccess;
+		[self _triggerHandlers];
+		return;
+	}
+	
+	NSLog(@"%@:%@ CONNECTING", self, NSStringFromSelector(_cmd));
+	
 	NSURLRequest *vlsRequest = [[NSURLRequest alloc] initWithURL:self.URL];
 	[NSURLConnection sendAsynchronousRequest:vlsRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 		
 		_remoteSettings = [self _dictionaryFromData:data];
 		
-		if (_remoteSettings)
+		if (_remoteSettings) {
 			_status = DCTRemoteSettingsStatusSuccess;
-		else
+			_diskCache.cachedRemoteSettings = _remoteSettings; // Won't cache when _diskCache is nil
+		} else {
 			_status = DCTRemoteSettingsStatusFailed;
-				
+		}
+		
 		[self _triggerHandlers];
 	}];
 }

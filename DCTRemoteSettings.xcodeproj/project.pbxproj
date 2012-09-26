@@ -20,6 +20,7 @@
 		2477060916121A6E0036486C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2477060816121A6E0036486C /* Default@2x.png */; };
 		2477060B16121A6E0036486C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2477060A16121A6E0036486C /* Default-568h@2x.png */; };
 		2477060F16121A7E0036486C /* libDCTRemoteSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 247705BD16120DC90036486C /* libDCTRemoteSettings.a */; };
+		247706121612E4470036486C /* _DCTRemoteSettingsDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 247706111612E4470036486C /* _DCTRemoteSettingsDiskCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		2477060616121A6E0036486C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2477060816121A6E0036486C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2477060A16121A6E0036486C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		247706101612E4470036486C /* _DCTRemoteSettingsDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DCTRemoteSettingsDiskCache.h; sourceTree = "<group>"; };
+		247706111612E4470036486C /* _DCTRemoteSettingsDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DCTRemoteSettingsDiskCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 			children = (
 				247705C516120DC90036486C /* DCTRemoteSettings.h */,
 				247705C716120DC90036486C /* DCTRemoteSettings.m */,
+				247706101612E4470036486C /* _DCTRemoteSettingsDiskCache.h */,
+				247706111612E4470036486C /* _DCTRemoteSettingsDiskCache.m */,
 			);
 			path = DCTRemoteSettings;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				247705C816120DC90036486C /* DCTRemoteSettings.m in Sources */,
+				247706121612E4470036486C /* _DCTRemoteSettingsDiskCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

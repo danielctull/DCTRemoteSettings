@@ -15,6 +15,7 @@
 	
 	DCTRemoteSettings *remoteSettings = [DCTRemoteSettings sharedRemoteSettings];
 	remoteSettings.URL = [NSURL URLWithString:@"http://danielctull.github.com/DCTRemoteSettings/test.json"];
+	remoteSettings.cacheOnDisk = YES;
 		
 	[remoteSettings objectForKey:@"name" handler:^(id object) {
 		NSLog(@"%@:%@ name: %@", self, NSStringFromSelector(_cmd), object);
