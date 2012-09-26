@@ -17,8 +17,6 @@ typedef enum : NSUInteger {
 
 @interface DCTRemoteSettings : NSObject
 
-+ (DCTRemoteSettings *)sharedRemoteSettings;
-
 @property (nonatomic, copy) NSURL *URL;
 @property (nonatomic, assign) BOOL cacheOnDisk;
 

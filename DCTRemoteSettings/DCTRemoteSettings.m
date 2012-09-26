@@ -16,15 +16,6 @@
 	__strong _DCTRemoteSettingsDiskCache *_diskCache;
 }
 
-+ (DCTRemoteSettings *)sharedRemoteSettings {
-	static DCTRemoteSettings *remoteSettings;
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		remoteSettings = [DCTRemoteSettings new];
-	});
-	return remoteSettings;
-}
-
 - (id)init {
 	self = [super init];
 	if (!self) return nil;
