@@ -17,11 +17,11 @@ typedef enum : NSUInteger {
 
 @interface DCTRemoteSettings : NSObject
 
-@property (nonatomic, copy) NSURL *URL;
-@property (nonatomic, assign) BOOL cacheOnDisk;
+- (id)initWithURL:(NSURL *)URL cacheOnDisk:(BOOL)cacheOnDisk;
 
+@property (nonatomic, readonly) NSURL *URL;
+@property (nonatomic, readonly) BOOL cacheOnDisk;
 @property (readonly) DCTRemoteSettingsStatus status;
-
 
 - (void)setDefaultSetting:(id)defaultSetting forKey:(NSString *)key;
 - (void)objectForKey:(NSString *)key handler:(void(^)(id object))handler;

@@ -16,34 +16,19 @@
 	__strong _DCTRemoteSettingsDiskCache *_diskCache;
 }
 
-- (id)init {
+- (id)initWithURL:(NSURL *)URL cacheOnDisk:(BOOL)cacheOnDisk {
+	
 	self = [super init];
 	if (!self) return nil;
-	_handlers = [NSMutableDictionary new];
-	_defaultSettings = [NSMutableDictionary new];	
-	return self;
-}
-
-- (void)setURL:(NSURL *)URL {
+	
 	_URL = [URL copy];
-	_remoteSettings = nil;
-	_status = DCTRemoteSettingsStatusNoSettings;
-	[self _setupDiskCache];
-}
-
-- (void)setCacheOnDisk:(BOOL)cacheOnDisk {
 	_cacheOnDisk = cacheOnDisk;
-	[self _setupDiskCache];
-}
-
-- (void)_setupDiskCache {
-	
-	if (!self.URL || !self.cacheOnDisk) {
-		_diskCache = nil;
-		return;
-	}
-	
-	_diskCache = [[_DCTRemoteSettingsDiskCache alloc] initWithURL:self.URL];
+	if (cacheOnDisk) _diskCache = [[_DCTRemoteSettingsDiskCache alloc] initWithURL:URL];
+			
+	_handlers = [NSMutableDictionary new];
+	_defaultSettings = [NSMutableDictionary new];
+		
+	return self;
 }
 
 - (void)setDefaultSetting:(id)defaultSetting forKey:(NSString *)key {
