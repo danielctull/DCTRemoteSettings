@@ -31,6 +31,12 @@
 	return self;
 }
 
+- (void)registerDefaults:(NSDictionary *)dictionary {
+	[dictionary enumerateKeysAndObjectsUsingBlock:^(id key, id object, BOOL *stop) {
+		[self registerDefault:object forKey:key];
+	}];
+}
+
 - (void)registerDefault:(id)defaultValue forKey:(NSString *)key {
 	[_defaultSettings setObject:defaultValue forKey:key];
 }

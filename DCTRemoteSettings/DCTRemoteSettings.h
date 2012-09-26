@@ -23,7 +23,9 @@ typedef enum : NSUInteger {
 @property (nonatomic, readonly) BOOL cacheOnDisk;
 @property (readonly) DCTRemoteSettingsStatus status;
 
+- (void)registerDefaults:(NSDictionary *)dictionary;
 - (void)registerDefault:(id)defaultValue forKey:(NSString *)key;
+
 - (void)objectForKey:(NSString *)key handler:(void(^)(id object))handler;
 
 @end
