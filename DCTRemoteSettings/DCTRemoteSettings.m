@@ -31,8 +31,8 @@
 	return self;
 }
 
-- (void)setDefaultSetting:(id)defaultSetting forKey:(NSString *)key {
-	[_defaultSettings setObject:defaultSetting forKey:key];
+- (void)registerDefault:(id)defaultValue forKey:(NSString *)key {
+	[_defaultSettings setObject:defaultValue forKey:key];
 }
 
 - (void)_setHandler:(void(^)(id object))handler forKey:(NSString *)key {
