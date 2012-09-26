@@ -62,7 +62,7 @@
 	
 	[self _setHandler:handler forKey:key];
 	
-	if (self.status > DCTRemoteSettingsStatusNoSettings)
+	if (self.status > DCTRemoteSettingsStatusNotFetched)
 		return;
 	
 	_status = DCTRemoteSettingsStatusFetching;
