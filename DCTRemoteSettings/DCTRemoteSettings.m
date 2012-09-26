@@ -98,8 +98,6 @@
 		return;
 	}
 	
-	NSLog(@"%@:%@ CONNECTING", self, NSStringFromSelector(_cmd));
-	
 	NSURLRequest *vlsRequest = [[NSURLRequest alloc] initWithURL:self.URL];
 	[NSURLConnection sendAsynchronousRequest:vlsRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 		
