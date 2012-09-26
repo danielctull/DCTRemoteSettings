@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	DCTRemoteSettings *remoteSettings = [DCTRemoteSettings sharedRemoteSettings];
-	remoteSettings.URL = [NSURL URLWithString:@"http://danieltull.co.uk/DCTRemoteSettings/test.json"];
+	remoteSettings.URL = [NSURL URLWithString:@"http://danielctull.github.com/DCTRemoteSettings/test.json"];
 		
 	[remoteSettings objectForKey:@"name" handler:^(id object) {
 		NSLog(@"%@:%@ name: %@", self, NSStringFromSelector(_cmd), object);
