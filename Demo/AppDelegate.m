@@ -13,10 +13,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	DCTRemoteSettings *remoteSettings = [DCTRemoteSettings sharedRemoteSettings];
-	remoteSettings.URL = [NSURL URLWithString:@"http://danielctull.github.com/DCTRemoteSettings/test.json"];
-	remoteSettings.cacheOnDisk = YES;
-		
+	NSURL *remoteSettingsURL = [NSURL URLWithString:@"http://danielctull.github.com/DCTRemoteSettings/test.json"];
+	DCTRemoteSettings *remoteSettings = [[DCTRemoteSettings alloc] initWithURL:remoteSettingsURL cacheOnDisk:NO];
+	
+	[remoteSettings registerDefaults:@{ @"name" : @"Daniel", @"amountToLoad" : @10 }];
+	
 	[remoteSettings objectForKey:@"name" handler:^(id object) {
 		NSLog(@"%@:%@ name: %@", self, NSStringFromSelector(_cmd), object);
 	}];
