@@ -43,6 +43,8 @@
 
 - (void)_setHandler:(void(^)(id object))handler forKey:(NSString *)key {
 	
+	if (handler == NULL) return;
+	
 	if (self.status > DCTRemoteSettingsStatusFetching) {
 		[self _triggerHandler:handler forKey:key];
 		return;
@@ -80,8 +82,8 @@
 		return;
 	}
 	
-	NSURLRequest *vlsRequest = [[NSURLRequest alloc] initWithURL:self.URL];
-	[NSURLConnection sendAsynchronousRequest:vlsRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.URL];
+	[NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 		
 		_remoteSettings = [self _dictionaryFromData:data];
 		
