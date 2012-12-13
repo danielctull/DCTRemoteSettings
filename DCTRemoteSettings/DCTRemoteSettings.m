@@ -75,24 +75,17 @@
 	
 	_status = DCTRemoteSettingsStatusFetching;
 	
-	_remoteSettings = [_diskCache cachedRemoteSettings];
-	if (_remoteSettings) {
-		_status = DCTRemoteSettingsStatusSuccess;
-		[self _triggerHandlers];
-		return;
-	}
-	
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.URL];
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:self.URL];
+	request.timeoutInterval = 10.0f;
 	[NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
 		
 		_remoteSettings = [self _dictionaryFromData:data];
-		
-		if (_remoteSettings) {
-			_status = DCTRemoteSettingsStatusSuccess;
-			_diskCache.cachedRemoteSettings = _remoteSettings; // Won't cache when _diskCache is nil
-		} else {
-			_status = DCTRemoteSettingsStatusFailed;
-		}
+
+		if (_remoteSettings) _diskCache.cachedRemoteSettings = _remoteSettings; // Won't cache when _diskCache is nil
+		else if (!_remoteSettings) _remoteSettings = [_diskCache cachedRemoteSettings];
+
+		if (_remoteSettings) _status = DCTRemoteSettingsStatusSuccess;
+		else _status = DCTRemoteSettingsStatusFailed;
 		
 		[self _triggerHandlers];
 	}];
