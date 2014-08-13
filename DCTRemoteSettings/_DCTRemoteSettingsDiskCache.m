@@ -36,7 +36,7 @@
 }
 
 - (NSURL *)_cacheURL {
-	NSString *string = [NSString stringWithFormat:@"%i", [_URL hash]];
+	NSString *string = [NSString stringWithFormat:@"%lu", (unsigned long)[_URL hash]];
 	return [[self _directoryURL] URLByAppendingPathComponent:string];
 }
 
